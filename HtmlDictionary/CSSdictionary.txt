@@ -1,0 +1,41 @@
+display - Określa, jak powinien być wyświetlany określony element HTML; block, inline, inline-block, none
+position - Określa rodzaj metody pozycjonowania zastosowanej dla elementu (statyczne, względne, bezwzględne lub stałe); absolut, relative, fixed, sticky
+    top left right bottom
+
+padding
+margin
+outline
+
+color - Ustawia kolor tekstu
+border- Skrócona właściwość dla border-width, border-style i border-color
+border-radius - Skrócona właściwość czterech właściwości border - * - radius
+font - Skrócona właściwość dla font-style, font-variant, font-weight, font-size / line-height i font-family 
+font-family - Określa rodzinę czcionek dla tekstu
+font-size - Określa rozmiar czcionki tekstu
+font-weight - Określa grubość czcionki
+font-style - Określa styl czcionki tekstu
+text-decoration - Określa dekorację dodaną do tekstu
+text-align - Określa poziome wyrównanie tekstu
+line-height - Ustawia wysokość linii
+letter-spacing - Zwiększa lub zmniejsza odstępy między znakami w tekście
+word-wrap - Umożliwia łamanie długich, nierozerwalnych słów i przechodzenie do następnego wiersza
+background -Skrócona właściwość dla wszystkich właściwości background- *
+background-image - Określa jeden lub więcej obrazów tła dla elementu
+background-color - Określa kolor tła elementu
+background-*
+width - Ustawia szerokość elementu
+height - Ustawia wysokość elementu
+opacity - Ustawia poziom nieprzezroczystości dla elementu
+float - Określa, czy pole powinno się unosić
+overflow - definiuje zachowanie elementu przy przekroczeniu jego granic
+
+
+
+transition - funkcje związane z przejściem danego elementu np. czas trwania przejścia, kiedy wystąpi przejście itp.
+transform - Stosuje transformację 2D lub 3D do elementu
+list-*
+
+
+
+
+b i u

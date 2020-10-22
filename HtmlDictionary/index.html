@@ -1,11 +1,1110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta naame="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Dictionary</title>
+  <style>
+    body {
+      padding-left: 32px;
+    }
+
+    /* a - wszystkie linki, wszystkie pseudoklasy */
+    a {
+      text-decoration: none;
+      color: darkcyan;
+    }
+    a:link {
+      font-style: normal;
+    }
+    a:visited {
+      font-style: italic;
+
+    }
+    a:hover {
+      color: rgb(250, 233, 79);
+      color: cornflowerblue;
+      color: #99FF12;
+      transition: color .3s;
+    }
+    a:active {
+      /* wcisniety */
+      color: lime;
+    }
+
+
+
+    #table-of-contents li.later a {
+      opacity: .25;
+      pointer-events: none;
+      
+    }
+/* 
+    #table-of-contents li.later {
+
+    } */
+    
+    #table-of-contents {
+      list-style-type: none;
+      padding-left: 0;
+      columns: 4;
+      width: 100%;
+      user-select: none;
+    }
+
+    section.later {
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
-  
+  <header>
+    <h1>HTML Dictionary</h1>
+    <nav>
+      <a name="table-of-contents"></a>
+      <ol id="table-of-contents">
+        <li>
+          <a href="#!--...--">&lt;!--...--&gt;</a>
+        </li>
+        <li>
+          <a href="#doctype">&lt;!doctype&gt;</a>
+        </li>
+        <li>
+          <a href="#a">&lt;a&gt;</a>
+        </li>
+        <li>
+          <a href="#abbr">&lt;abbr&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#address">&lt;address&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#area">&lt;area&gt;</a>
+        </li>
+        <li>
+          <a href="#article">&lt;article&gt;</a>
+        </li>
+        <li>
+          <a href="#aside">&lt;aside&gt;</a>
+        </li>
+        <li>
+          <a href="#audio">&lt;audio&gt;</a>
+        </li>
+        <li>
+          <a href="#b">&lt;b&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#base">&lt;base&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#bdo">&lt;bdo&gt;</a>
+        </li>
+        <li>
+          <a href="#blockquote">&lt;blockquote&gt;</a>
+        </li>
+        <li>
+          <a href="#body">&lt;body&gt;</a>
+        </li>
+        <li>
+          <a href="#br">&lt;br /&gt;</a>
+        </li>
+        <li>
+          <a href="#button">&lt;button&gt;</a>
+        </li>
+        <li>
+          <a href="#canvas">&lt;canvas&gt;</a>
+        </li>
+        <li>
+          <a href="#caption">&lt;caption&gt;</a>
+        </li>
+        <li>
+          <a href="#cite">&lt;cite&gt;</a>
+        </li>
+        <li>
+          <a href="#code">&lt;code&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#col">&lt;col&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#colgroup">&lt;colgroup&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#command">&lt;command&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#datalist">&lt;datalist&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#dd">&lt;dd&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#del">&lt;del&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#details">&lt;details&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#dfn">&lt;dfn&gt;</a>
+        </li>
+        <li>
+          <a href="#div">&lt;div&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#dl">&lt;dl&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#dt">&lt;dt&gt;</a>
+        </li>
+        <li>
+          <a href="#em">&lt;em&gt;</a>
+        </li>
+        <li>
+          <a href="#embed">&lt;embed&gt;</a>
+        </li>
+        <li>
+          <a href="#fieldset">&lt;fieldset&gt;</a>
+        </li>
+        <li>
+          <a href="#figcaption">&lt;figcaption&gt;</a>
+        </li>
+        <li>
+          <a href="#figure">&lt;figure&gt;</a>
+        </li>
+        <li>
+          <a href="#footer">&lt;footer&gt;</a>
+        </li>
+        <li>
+          <a href="#form">&lt;form&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#frame">&lt;frame&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#frameset">&lt;frameset&gt;</a>
+        </li>
+        <li>
+          <a href="#h1">&lt;h1 to h6&gt;</a>
+        </li>
+        <li>
+          <a href="#head">&lt;head&gt;</a>
+        </li>
+        <li>
+          <a href="#header">&lt;header&gt;</a>
+        </li>
+        <li>
+          <a href="#hr">&lt;hr&gt;</a>
+        </li>
+        <li>
+          <a href="#html">&lt;html&gt;</a>
+        </li>
+        <li>
+          <a href="#i">&lt;i&gt;</a>
+        </li>
+        <li>
+          <a href="#iframe">&lt;iframe&gt;</a>
+        </li>
+        <li>
+          <a href="#img">&lt;img&gt;</a>
+        </li>
+        <li>
+          <a href="#input">&lt;input&gt;</a>
+        </li>
+        <li>
+          <a href="#ins">&lt;ins&gt;</a>
+        </li>
+        <li>
+          <a href="#kbd">&lt;kbd&gt;</a>
+        </li>
+        <li>
+          <a href="#label">&lt;label&gt;</a>
+        </li>
+        <li>
+          <a href="#legend">&lt;legend&gt;</a>
+        </li>
+        <li>
+          <a href="#li">&lt;li&gt;</a>
+        </li>
+        <li>
+          <a href="#link">&lt;link&gt;</a>
+        </li>
+        <li>
+          <a href="#map">&lt;map&gt;</a>
+        </li>
+        <li>
+          <a href="#mark">&lt;mark&gt;</a>
+        </li>
+        <li>
+          <a href="#menu">&lt;menu&gt;</a>
+        </li>
+        <li>
+          <a href="#meta">&lt;meta&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#meter">&lt;meter&gt;</a>
+        </li>
+        <li>
+          <a href="#nav">&lt;nav&gt;</a>
+        </li>
+        <li>
+          <a href="#noscript">&lt;noscript&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#object">&lt;object&gt;</a>
+        </li>
+        <li>
+          <a href="#ol">&lt;ol&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#optgroup">&lt;optgroup&gt;</a>
+        </li>
+        <li>
+          <a href="#option">&lt;option&gt;</a>
+        </li>
+        <li>
+          <a href="#output">&lt;output&gt;</a>
+        </li>
+        <li>
+          <a href="#p">&lt;p&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#param">&lt;param&gt;</a>
+        </li>
+        <li>
+          <a href="#pre">&lt;pre&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#progress">&lt;progress&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#q">&lt;q&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#rp">&lt;rp&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#rt">&lt;rt&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#ruby">&lt;ruby&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#s">&lt;s&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#samp">&lt;samp&gt;</a>
+        </li>
+        <li>
+          <a href="#script">&lt;script&gt;</a>
+        </li>
+        <li>
+          <a href="#section">&lt;section&gt;</a>
+        </li>
+        <li>
+          <a href="#select">&lt;select&gt;</a>
+        </li>
+        <li>
+          <a href="#small">&lt;small&gt;</a>
+        </li>
+        <li>
+          <a href="#source">&lt;source&gt;</a>
+        </li>
+        <li>
+          <a href="#span">&lt;span&gt;</a>
+        </li>
+        <li>
+          <a href="#strong">&lt;strong&gt;</a>
+        </li>
+        <li>
+          <a href="#style">&lt;style&gt;</a>
+        </li>
+        <li>
+          <a href="#sub">&lt;sub&gt;</a>
+        </li>
+        <li>
+          <a href="#sup">&lt;sup&gt;</a>
+        </li>
+        <li>
+          <a href="#table">&lt;table&gt;</a>
+        </li>
+        <li>
+          <a href="#tbody">&lt;tbody&gt;</a>
+        </li>
+        <li>
+          <a href="#td">&lt;td&gt;</a>
+        </li>
+        <li>
+          <a href="#textarea">&lt;textarea&gt;</a>
+        </li>
+        <li>
+          <a href="#tfoot">&lt;tfoot&gt;</a>
+        </li>
+        <li>
+          <a href="#th">&lt;th&gt;</a>
+        </li>
+        <li>
+          <a href="#thead">&lt;thead&gt;</a>
+        </li>
+        <li>
+          <a href="#time">&lt;time&gt;</a>
+        </li>
+        <li>
+          <a href="#title">&lt;title&gt;</a>
+        </li>
+        <li>
+          <a href="#tr">&lt;tr&gt;</a>
+        </li>
+        <li class="later">
+          <a href="#track">&lt;track&gt;</a>
+        </li>
+        <li>
+          <a href="#u">&lt;u&gt;</a>
+        </li>
+        <li>
+          <a href="#ul">&lt;ul&gt;</a>
+        </li>
+        <li>
+          <a href="#var">&lt;var&gt;</a>
+        </li>
+        <li>
+          <a href="#video">&lt;video&gt;</a>
+        </li>
+        <li>
+          <a href="#wbr">&lt;wbr&gt;</a>
+        </li>
+      </ol>
+    </nav>
+    <main>
+      <section>
+        <header>
+          <h2>&lt;!--...--&gt; <a name="!--...--"></a></h2>
+        </header>
+        <p>EN: Describe a comment text in the source code</p>
+        <p>PL: Opisuje tekst komentarza w kodzie źródłowym</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;!doctype&gt; <a name="!doctype"></a></h2>
+        </header>
+        <p>EN: Defines a document type</p>
+        <p>PL: Określa typ dokumentu</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;a&gt; <a name="a"></a></h2>
+        </header>
+        <p>EN: Specific a anchor (Hyperlink)
+          Use for link in internal/external web documents</p>
+        <p>PL: Określenie kotwicy (hiperłącza)
+          Używane jako link w wewnętrznych/zewnętrznych dokumentach internetowych
+        </p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;abbr&gt; <a name="abbr"></a></h2>
+        </header>
+        <p>EN: Describes an abbreviation (acronyms)</p>
+        <p>PL: Opisuje skrót (akronimy)</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;address&gt; <a name="address"></a></h2>
+        </header>
+        <p>EN: Describes an address information</p>
+        <p>PL: Opisuje informacje adresowe</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;area&gt; <a name="area"></a></h2>
+        </header>
+        <p>EN: Defines an area in an image map</p>
+        <p>PL: Definiuje obszar na mapie obrazu</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;article&gt; <a name="article"></a></h2>
+        </header>
+        <p>EN: Defines an article</p>
+        <p>PL: Definiuje artykuł</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;aside&gt; <a name="aside"></a></h2>
+        </header>
+        <p>EN: Describes contain set(or write) on aside place in page contain</p>
+        <p>PL: Obszar na boku części głównej stony, reprezentująca treść o drugorzędnej ważności  </p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;audio&gt; <a name="audio"></a></h2>
+        </header>
+        <p>EN: Specific audio content</p>
+        <p>PL: Określona treść audio</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;b&gt; <a name="b"></a></h2>
+        </header>
+        <p>EN: Specific text weight bold</p>
+        <p>PL: Pogrubienie tekstu</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;base&gt; <a name="base"></a></h2>
+        </header>
+        <p>EN: Define a base URL for all the links with in a web page</p>
+        <p>PL: Definiuje podstawowy adres URL dla wszystkich linków ze strony internetowej</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;bdo&gt; <a name="bdo"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;blockquote&gt; <a name="blockquote"></a></h2>
+        </header>
+        <p>EN: Specifies a long quotation</p>
+        <p>PL: Określa długi cytat</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;body&gt; <a name="body"></a></h2>
+        </header>
+        <p>EN: Defines a main section(body) part in HTML document</p>
+        <p>PL: Definiuje główną część (treść) w dokumencie HTML</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;br /&gt; <a name="br /"></a></h2>
+        </header>
+        <p>EN: Specific a single line break</p>
+        <p>PL: Definiuje pojedyncze przejście do nowej lini</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;button&gt; <a name="button"></a></h2>
+        </header>
+        <p>EN: Specifies a press/push button</p>
+        <p>PL: Definiuje przycisk</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;canvas&gt; <a name="canvas"></a></h2>
+        </header>
+        <p>EN: Specifies the display graphics on HTML web documment</p>
+        <p>PL: Określa grafikę wyświetlaną w dokumencie sieciowym HTML</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;caption&gt; <a name="caption"></a></h2>
+        </header>
+        <p>EN: Define a table caption</p>
+        <p>PL: Definiuje podpis tabeli</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;cite&gt; <a name="cite"></a></h2>
+        </header>
+        <p>EN: Specifies a text citation</p>
+        <p>PL: Określa tekst cytatu</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;code&gt; <a name="code"></a></h2>
+        </header>
+        <p>EN: Specifies computer code text</p>
+        <p>PL: Określa tekst kodu komputerowego</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;col&gt; <a name="col"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;colgroup&gt; <a name="colgroup"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;command&gt; <a name="command"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;datalist&gt; <a name="datalist"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;dd&gt; <a name="dd"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;del&gt; <a name="del"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;details&gt; <a name="details"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;dfn&gt; <a name="dfn"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;div&gt; <a name="div"></a></h2>
+        </header>
+        <p>EN: Defines a division part</p>
+        <p>PL: Definiuje miejsce podziału, oddziela treści od siebie, jest kontenerem</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;dl&gt; <a name="dl"></a></h2>
+        </header>
+        <p>EN: Definition list</p>
+        <p>PL: Lista definicji</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;dt&gt; <a name="dt"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;em&gt; <a name="em"></a></h2>
+        </header>
+        <p>EN: Emphasized text</p>
+        <p>PL: Zaakcentowany, uwydatniony tekst</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;embed&gt; <a name="embed"></a></h2>
+        </header>
+        <p>EN: Embedding external application using a relative plug-in</p>
+        <p>PL: Zagnieżdzżenie zewnętrznej aplikacji wymagającej wtyczki</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;fieldset&gt; <a name="fieldset"></a></h2>
+        </header>
+        <p>EN: Defines a grouping of related form elements</p>
+        <p>PL: Grupa powiązanych elementów formularza</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;figcaption&gt; <a name="figcaption"></a></h2>
+        </header>
+        <p>EN: Represents a caption text corresponding with a figure element</p>
+        <p>PL: Podpis obrazka/tabeli/wykresu</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;figure&gt; <a name="figure"></a></h2>
+        </header>
+        <p>EN: Represents self-contained content corresponding with a &lt;figcaption&gt; element</p>
+        <p>PL: Obrazek/tabela/wykres</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;footer&gt; <a name="footer"></a></h2>
+        </header>
+        <p>EN: Defines a footer section containing details about the author, copyright, contact us, sitemap, or links to related documents</p>
+        <p>PL: Sekcja stopki zawierająca szczegółowe informacje o autorze, prawach autorskich, kontakt, mapę witryny lub linki do powiązanych dokumentów</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;form&gt; <a name="form"></a></h2>
+        </header>
+        <p>EN: Defines a form section that having interactive input controls to submit form information to a server</p>
+        <p>PL: Sekcja formularza, która ma interaktywne kontrolki wejściowe do przesyłania informacji z formularza na serwer.
+        </p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;frame&gt; <a name="frame"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;frameset&gt; <a name="frameset"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;h1 to h6&gt; <a name="h1 to h6"></a></h2>
+        </header>
+        <p>EN: Defines a Headings level from 1 to 6 different sizes</p>
+        <p>PL: Rozmiary nagłówków od 1 do 6</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;head&gt; <a name="head"></a></h2>
+        </header>
+        <p>EN: Defines header section of HTML document</p>
+        <p>PL: Nagłówek dokomuentu HTML</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;header&gt; <a name="header"></a></h2>
+        </header>
+        <p>EN: Defines as a container that hold introductory content or navigation links</p>
+        <p>PL: Kontener zawierający zawartość wprowadzającą lub linki nawigacyjne.
+        </p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;hr/&gt; <a name="hr"></a></h2>
+        </header>
+        <p>EN: Represent a thematic break between paragraph-level tags. It is typically draw horizontal line</p>
+        <p>PL: Przedstawiają tematyczną przerwę między znacznikami na poziomie akapitu. Zwykle jest to linia pozioma</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;html&gt; <a name="html"></a></h2>
+        </header>
+        <p>EN: Define a document is a HTML markup language</p>
+        <p>PL: Korzeń dokumentu HTML</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;i&gt; <a name="i"></a></h2>
+        </header>
+        <p>EN: Defines a italic format text</p>
+        <p>PL: Definiuje tekst w formacie kursywy</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;iframe&gt; <a name="iframe"></a></h2>
+        </header>
+        <p>EN: Defines a inline frame that embedded external content into current web document</p>
+        <p>PL: Definiuje ramkę wbudowaną, która osadza zawartość zewnętrzną w bieżącym dokumencie internetowym</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;img&gt; <a name="img"></a></h2>
+        </header>
+        <p>EN: Used to insert image into a web document</p>
+        <p>PL: Służy do wstawiania obrazu do dokumentu internetowego</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;input&gt; <a name="input"></a></h2>
+        </header>
+        <p>EN: Define a get information in selected input</p>
+        <p>PL: Umożliwia wprowadzanie danych użytkownikom</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;ins&gt; <a name="ins"></a></h2>
+        </header>
+        <p>EN: Used to indicate text that is inserted into a page and indicates changes to a document</p>
+        <p>PL: Służy do wskazania tekstu wstawionego na stronę i wskazuje zmiany w dokumencie</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;kbd&gt; <a name="kbd"></a></h2>
+        </header>
+        <p>EN: Used to identify text that are represents keyboard input</p>
+        <p>PL: Służy do identyfikacji tekstu, który reprezentuje dane wejściowe z klawiatury</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;label&gt; <a name="label"></a></h2>
+        </header>
+        <p>EN: Used to caption a text label with a form &lt;input&gt; element</p>
+        <p>PL: Służy do podpisywania etykiety tekstowej elementem formularza &lt;input&gt;</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;legend&gt; <a name="legend"></a></h2>
+        </header>
+        <p>EN: Used to add a caption (title) to a group of related form elements that are grouped together into the &lt;fieldset&gt;tag</p>
+        <p>PL: Służy do dodawania podpisu (tytułu) do grupy powiązanych elementów formularza, które są zgrupowane razem w tagu &lt;fieldset&gt;</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;li&gt; <a name="li"></a></h2>
+        </header>
+        <p>EN: Define a list item either ordered list or unordered list</p>
+        <p>PL: Definiuje element listy jako listę uporządkowaną lub nieuporządkowaną</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;link&gt; <a name="link"></a></h2>
+        </header>
+        <p>EN: Used to load an external stylesheets into HTML document</p>
+        <p>PL: Służy do ładowania zewnętrznych arkuszy stylów do dokumentu HTML</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;map&gt; <a name="map"></a></h2>
+        </header>
+        <p>EN: Defines an clickable image map</p>
+        <p>PL: Definiuje klikalną mapę obrazu</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;mark&gt; <a name="mark"></a></h2>
+        </header>
+        <p>EN: Used to highlighted (marked) specific text</p>
+        <p>PL: Służy do wyróżnienia (zaznaczenia) określonego tekstu</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;menu&gt; <a name="menu"></a></h2>
+        </header>
+        <p>EN: Used to display a unordered list of items/menu of commands</p>
+        <p>PL: Służy do wyświetlania nieuporządkowanej listy elementów / menu poleceń</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;meta&gt; <a name="meta"></a></h2>
+        </header>
+        <p>EN: Used to provide structured metadata about a web page</p>
+        <p>PL: Służy do dostarczania ustrukturyzowanych metadanych dotyczących strony internetowej</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;meter&gt; <a name="meter"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;nav&gt; <a name="nav"></a></h2>
+        </header>
+        <p>EN: Used to defines group of navigation links</p>
+        <p>PL: Służy do definiowania grupy linków nawigacyjnych</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;noscript&gt; <a name="noscript"></a></h2>
+        </header>
+        <p>EN: Used to provide an fall-back content to the browser that does not support the JavaScript</p>
+        <p>PL: Służy do dostarczania zawartości rezerwowej do przeglądarki, która nie obsługuje JavaScript</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;object&gt; <a name="object"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;ol&gt; <a name="ol"></a></h2>
+        </header>
+        <p>EN: Defines an ordered list of items</p>
+        <p>PL: Definiuje uporządkowaną listę elementów</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;optgroup&gt; <a name="optgroup"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;option&gt; <a name="option"></a></h2>
+        </header>
+        <p>EN: Represents option items within a &lt;select&gt;, &lt;optgroup&gt; or &lt;datalist&gt; element</p>
+        <p>PL: Reprezentuje elementy opcji w elemencie &lt;select&gt;, &lt;optgroup&gt; lub &lt;datalist&gt;</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;output&gt; <a name="output"></a></h2>
+        </header>
+        <p>EN: Used for representing the result of a calculation</p>
+        <p>PL: Służy do przedstawiania wyniku obliczenia</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;p&gt; <a name="p"></a></h2>
+        </header>
+        <p>EN: Used to represents a paragraph text</p>
+        <p>PL: Akapit</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;param&gt; <a name="param"></a></h2>
+        </header>
+        <p>EN: Provides parameters for embedded object element</p>
+        <p>PL: Zawiera parametry dla osadzonego elementu obiektu</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;pre&gt; <a name="pre"></a></h2>
+        </header>
+        <p>EN: Used to represents preformatted text</p>
+        <p>PL: Służy do reprezentowania wstępnie sformatowanego tekstu</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;progress&gt; <a name="progress"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;q&gt; <a name="q"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;rp&gt; <a name="rp"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;rt&gt; <a name="rt"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;ruby&gt; <a name="ruby"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;s&gt; <a name="s"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;samp&gt; <a name="samp"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;script&gt; <a name="script"></a></h2>
+        </header>
+        <p>EN: Defines client-side JavaScript</p>
+        <p>PL: Definiuje JavaScript</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;section&gt; <a name="section"></a></h2>
+        </header>
+        <p>EN: Used to divide a document into number of different generic section</p>
+        <p>PL: Służy do dzielenia dokumentu na kilka różnych sekcji ogólnych</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;select&gt; <a name="select"></a></h2>
+        </header>
+        <p>EN: Used to create a drop-down list</p>
+        <p>PL: Służy do tworzenia listy rozwijanej</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;small&gt; <a name="small"></a></h2>
+        </header>
+        <p>EN: Used to makes the text one size smaller</p>
+        <p>PL: Służy do zmniejszania tekstu o jeden rozmiar</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;source&gt; <a name="source"></a></h2>
+        </header>
+        <p>EN: Used to specifies multiple media resources</p>
+        <p>PL: Służy do określania wielu zasobów multimedialnych</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;span&gt; <a name="span"></a></h2>
+        </header>
+        <p>EN: Used to grouping and applying styles to inline elements</p>
+        <p>PL: Służy do grupowania i stosowania stylów do elementów wbudowanych</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;strong&gt; <a name="strong"></a></h2>
+        </header>
+        <p>EN: Represents strong emphasis greater important text</p>
+        <p>PL: Uwydatnia ważny tekst</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;style&gt; <a name="style"></a></h2>
+        </header>
+        <p>EN: Used to add CSS style to an HTML document</p>
+        <p>PL: Służy do dodawania stylu CSS do dokumentu HTML</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;sub&gt; <a name="sub"></a></h2>
+        </header>
+        <p>EN: Represents inline subscript text</p>
+        <p>PL: Reprezentuje tekst indeksu dolnego w wierszu</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;sup&gt; <a name="sup"></a></h2>
+        </header>
+        <p>EN: Represents inline superscript text</p>
+        <p>PL: Reprezentuje tekst w indeksie górnym w wierszu</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;table&gt; <a name="table"></a></h2>
+        </header>
+        <p>EN: Used to defines a table in HTML document</p>
+        <p>PL: Służy do definiowania tabeli w dokumencie HTML</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;tbody&gt; <a name="tbody"></a></h2>
+        </header>
+        <p>EN: Used for grouping table rows</p>
+        <p>PL: Służy do grupowania wierszy tabeli</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;td&gt; <a name="td"></a></h2>
+        </header>
+        <p>EN: Used for creates standard data cell in HTML table</p>
+        <p>PL: Służy do tworzenia standardowej komórki danych w tabeli HTML</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;textarea&gt; <a name="textarea"></a></h2>
+        </header>
+        <p>EN: Create multi-line text input</p>
+        <p>PL: Tworzenie wielowierszowego wprowadzania tekstu</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;tfoot&gt; <a name="tfoot"></a></h2>
+        </header>
+        <p>EN: Used to adding a footer to a table that containing summary of the table data</p>
+        <p>PL: Służy do dodawania stopki do tabeli zawierającej podsumowanie danych tabeli</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;th&gt; <a name="th"></a></h2>
+        </header>
+        <p>EN: Used for creates header of a group of cell in HTML table</p>
+        <p>PL: Służy do tworzenia nagłówka grupy komórek w tabeli HTML</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;thead&gt; <a name="thead"></a></h2>
+        </header>
+        <p>EN: Used to adding a header to a table that containing header information of the table</p>
+        <p>PL: Służy do dodawania nagłówka do tabeli zawierającej informacje nagłówka tabeli</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;time&gt; <a name="time"></a></h2>
+        </header>
+        <p>EN: Represents the date and/or time in an HTML document</p>
+        <p>PL: Reprezentuje datę i / lub godzinę w dokumencie HTML</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;title&gt; <a name="title"></a></h2>
+        </header>
+        <p>EN: Represents title to an HTML document</p>
+        <p>PL: Reprezentuje tytuł dokumentu HTML</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;tr&gt; <a name="tr"></a></h2>
+        </header>
+        <p>EN: Defines a row of cells in a table</p>
+        <p>PL: Definiuje wiersz komórek w tabeli</p>
+      </section>
+      <section class="later">
+        <header>
+          <h2>&lt;track&gt; <a name="track"></a></h2>
+        </header>
+        <p>EN: Description</p>
+        <p>PL: Description</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;u&gt; <a name="u"></a></h2>
+        </header>
+        <p>EN: Represents underlined text</p>
+        <p>PL: Reprezentuje podkreślony tekst</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;ul&gt; <a name="ul"></a></h2>
+        </header>
+        <p>EN: Defines an unordered list of items</p>
+        <p>PL: Definiuje nieuporządkowaną listę elementów</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;var&gt; <a name="var"></a></h2>
+        </header>
+        <p>EN: Represents a variable in a computer program or mathematical equation</p>
+        <p>PL: Reprezentuje zmienną w programie komputerowym lub równaniu matematycznym</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;video&gt; <a name="video"></a></h2>
+        </header>
+        <p>EN: Used to embed video content</p>
+        <p>PL: Służy do osadzania treści wideo</p>
+      </section>
+      <section>
+        <header>
+          <h2>&lt;wbr&gt; <a name="wbr"></a> <a href="#table-of-contents">↑</a></h2>
+        </header>
+        <p>EN: Defines a word break opportunity in a long string of text</p>
+        <p>PL: Definiuje możliwość dzielenia wyrazów w długim ciągu tekstu</p>
+      </section>
+    </main>
+  </header>
 </body>
+
 </html>
