@@ -1,6 +1,29 @@
+
+
+========
+1. zaznacz porcje tekstu
+2. ctrl+d
+wynik: zaznaczone kolejne wystapienie zaznaczonego tekstu
+========
+shift + delete usuwa cala linie, gdy nic nie jest zaznaczone
+========
+
+<section name=
+  <header>
+    <h2>AME"></h2>
+  </header>
+  <p>EN: Description</p>
+  <p>PL: Description</p>
+</section>
+
+
+
+
+
 display - Określa, jak powinien być wyświetlany określony element HTML; block, inline, inline-block, none
-position - Określa rodzaj metody pozycjonowania zastosowanej dla elementu (statyczne, względne, bezwzględne lub stałe); absolut, relative, fixed, sticky
+position - Określa rodzaj metody pozycjonowania zastosowanej dla elementu (statyczne, względne, bezwzględne lub stałe); absolute, relative, fixed, sticky
     top left right bottom
+pointer-events: none - blokuje akcje myszki na elemencie 
 
 padding
 margin
@@ -8,7 +31,7 @@ outline
 
 color - Ustawia kolor tekstu
 border- Skrócona właściwość dla border-width, border-style i border-color
-border-radius - Skrócona właściwość czterech właściwości border - * - radius
+border-radius - Skrócona właściwość czterech właściwości border - * - radius - robi zaokrąglenia np. w ramce
 font - Skrócona właściwość dla font-style, font-variant, font-weight, font-size / line-height i font-family 
 font-family - Określa rodzinę czcionek dla tekstu
 font-size - Określa rozmiar czcionki tekstu
@@ -16,24 +39,25 @@ font-weight - Określa grubość czcionki
 font-style - Określa styl czcionki tekstu
 text-decoration - Określa dekorację dodaną do tekstu
 text-align - Określa poziome wyrównanie tekstu
-line-height - Ustawia wysokość linii
-letter-spacing - Zwiększa lub zmniejsza odstępy między znakami w tekście
-word-wrap - Umożliwia łamanie długich, nierozerwalnych słów i przechodzenie do następnego wiersza
 background -Skrócona właściwość dla wszystkich właściwości background- *
 background-image - Określa jeden lub więcej obrazów tła dla elementu
 background-color - Określa kolor tła elementu
 background-*
-width - Ustawia szerokość elementu
-height - Ustawia wysokość elementu
+width - Ustawia szerokość elementu (min-width, max-width)
+height - Ustawia wysokość elementu (min-height, max-height)
 opacity - Ustawia poziom nieprzezroczystości dla elementu
 float - Określa, czy pole powinno się unosić
 overflow - definiuje zachowanie elementu przy przekroczeniu jego granic
-
+z-index: 9999;
+filter: blur, brightness, shadow, inne
 
 
 transition - funkcje związane z przejściem danego elementu np. czas trwania przejścia, kiedy wystąpi przejście itp.
 transform - Stosuje transformację 2D lub 3D do elementu
 list-*
+line-height - Ustawia wysokość linii
+letter-spacing - Zwiększa lub zmniejsza odstępy między znakami w tekście
+word-wrap - Umożliwia łamanie długich, nierozerwalnych słów i przechodzenie do następnego wiersza
 
 
 
